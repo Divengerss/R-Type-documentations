@@ -12,6 +12,8 @@
         <link rel="prev" href="../../binary_protocol/">
       
       
+        <link rel="next" href="../disconnection_request/">
+      
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
@@ -61,6 +63,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#connection-request" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -206,7 +213,7 @@
         
   
   <span class="md-ellipsis">
-    Client
+    Client documentation
   </span>
   
 
@@ -381,6 +388,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -392,6 +401,26 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disconnection_request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disconnection request
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -437,6 +466,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -451,8 +482,7 @@
                   
 
 
-  <h1>Connection request</h1>
-
+<h1 id="connection-request">Connection request</h1>
 <p>Type <code>CONNECTION_REQUEST</code></p>
 <pre><code class="language-cpp">struct connectionRequest
 {

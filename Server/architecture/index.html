@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#architecture" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -208,7 +213,7 @@
         
   
   <span class="md-ellipsis">
-    Client
+    Client documentation
   </span>
   
 
@@ -266,6 +271,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -395,6 +402,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Protocol/Packets/disconnection_request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disconnection request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -435,6 +462,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -449,9 +478,124 @@
                   
 
 
-  <h1>Architecture</h1>
+<h1 id="architecture">Architecture</h1>
+<p>The server should be self-explanatory when reading the source code, nevertheless, this documentation provides more details about the server workflow.</p>
+<p>The server uses Asio non-boost C++20 to run.</p>
+<p>Every network codes are under the <code>net</code> namespace included in the <code>Netcode.hpp</code>.</p>
+<p>To instantiate a new server, simply call the <code>Server</code> class constructor and calls <code>startServer()</code> to start the server.
+Just by doing that will run your server properly. However, you need to keep your program open or the server will close itself if the main returns.</p>
+<p>Here is an example of implementation</p>
+<pre><code class="language-cpp">#include &quot;Netcode.hpp&quot;
 
+int main()
+{
+    asio::io_context ioContext;
+    asio::io_service ioService;
 
+    net::Server server(ioContext, ioService);
+
+    server.startServer();
+
+    while (true) {
+        // Game logics
+    }
+}
+</code></pre>
+<p>The server constructor needs an Asio context and service. Those are used to run the network context and service from Asio.</p>
+<p>Simply instanciate and pass them to the ctor.</p>
+<h1 id="cfg-config-files">CFG Config files</h1>
+<p>The configuration file is required to run the server with modified settings.
+It provides the host and port to listen to.</p>
+<p>Here is the <code>server.cfg</code> file located inside the <code>Release</code> directory.</p>
+<pre><code class="language-conf"># Server config file
+
+# IP Address to connect to
+host=127.0.0.1
+
+# Port of the host to connect to
+port=12346
+</code></pre>
+<h1 id="constructorsdestructors">Constructors/Destructors</h1>
+<h3 id="server-default-ctor">Server default ctor</h3>
+<p><code>Server() = delete</code></p>
+<p>The default constructor of the Server class is deleted to allow better workflow.</p>
+<h3 id="server-ctor">Server ctor</h3>
+<p><code>Server(asio::io_context &amp;ioContext, asio::io_context &amp;ioService)</code></p>
+<p>Server class ctor, requires an Asio context as <code>asio::io_context</code> and an Asio server as <code>asio::io_context</code>.
+The ctor will seek a <code>.cfg</code> file for its configuration as mention before. If the file format is corrupted, a value can't be found or the file is missing, the default values are applied.
+If unchanged in the code, they will be 127.0.0.1 for the host and 12346 for the port number</p>
+<h3 id="server">~Server</h3>
+<p><code>~Server()</code></p>
+<p>The <code>Server</code> class destructor.</p>
+<h1 id="getters">Getters</h1>
+<h3 id="getiocontext">getIoContext</h3>
+<p><code>asio::io_context &amp;getIoContext() const noexcept</code></p>
+<p>Returns the Asio IO context.</p>
+<h3 id="getioservice">getIoService</h3>
+<p><code>asio::io_context &amp;getIoService() const noexcept</code></p>
+<p>Returns the Asio IO Serivice.</p>
+<h3 id="gethost">getHost</h3>
+<p><code>const std::string &amp;getHost() const noexcept</code></p>
+<p>Returns the Host string.</p>
+<h3 id="getport">getPort()</h3>
+<p><code>std::uint16_t getPort() const noexcept</code></p>
+<p>Returns the Port number as an unsigned 16bits integer</p>
+<h3 id="getserverendpoint">getServerEndpoint</h3>
+<p><code>const asio::ip::udp::endpoint &amp;getServerEndpoint() const noexcept</code></p>
+<p>Returns the server endpoint, the endpoint corresponds to the communication terminaison of the server.</p>
+<h3 id="getsocket">getSocket</h3>
+<p><code>const asio::ip::udp::socket &amp;getSocket() const noexcept</code></p>
+<p>Returns the server socket.</p>
+<h3 id="getasioerrorcode">getAsioErrorCode</h3>
+<p><code>const asio::error_code &amp;getAsioErrorCode() const noexcept</code></p>
+<p>Returns the Asio error code. This value is set whenever an error occures in the Asio context.</p>
+<h3 id="getclients">getClients</h3>
+<p><code>const std::unordered_map&lt;std::string, asio::ip::udp::endpoint&gt; &amp;getClients() const noexcept</code></p>
+<p>Returns the connected clients list as an unordered map. The key corresponds to the UUID of the client and the value its endpoint.</p>
+<h1 id="setters">Setters</h1>
+<h3 id="sethost">setHost</h3>
+<p><code>void setHost(const std::string &amp;host)</code></p>
+<p>Sets the server host.</p>
+<h3 id="setport">setPort</h3>
+<p><code>void setPort(std::uint16_t port)</code></p>
+<p>Sets the server port</p>
+<h3 id="setconnection">setConnection</h3>
+<p><code>void setConnection(const std::string &amp;host, std::uint16_t port)</code></p>
+<p>Sets the server host and port, This calls to the <code>setHost</code> and <code>setPort</code>.</p>
+<h3 id="setserverinstance">setServerInstance</h3>
+<p><code>static void setServerInstance(Server* instance)</code></p>
+<p>Set the static variable <code>serverInstance</code> used to access class elements from the IO Service, mainly used to handle CTRL-C event.</p>
+<h3 id="setpacket">setPacket</h3>
+<p><code>void setPacket(T &amp;packet, packet::packetHeader &amp;header, T &amp;data)</code></p>
+<p>Sets the packet from a <code>typename T</code> template packet, the packet header and its data.
+This function will memory copy the <code>header</code> and <code>data</code> into the <code>packet</code>. The packet must be large enough to hold the header + data sizes.</p>
+<h3 id="fillbufferfromrequest">fillBufferFromRequest</h3>
+<p><code>void fillBufferFromRequest(T &amp;packet, std::size_t size)</code></p>
+<p>Fills the <code>packet</code> given as parameter from the private variable <code>_packet</code> of the <code>Server</code> class.
+This function will memory copy into <code>packet</code>.</p>
+<h3 id="sendresponse">sendResponse</h3>
+<p><code>void sendResponse(const packet::packetTypes &amp;type, T &amp;packet, const std::string cliUuid = "")</code></p>
+<p>Builds a packet and sends it to all the clients if no <code>cliUuid</code> are provided.
+The <code>packet</code> must not contains any header as it is generated using the <code>type</code> variable and the size of packet.
+If the <code>cliUuid</code> is set, the packet will only be sent to the given client UUID. If the UUID is invalid or doesn't link to a valid client, the packet remains unsent.</p>
+<h3 id="handlerequeststatus">handleRequestStatus</h3>
+<p><code>void handleRequestStatus()</code></p>
+<p>Handles each packets type.</p>
+<h3 id="handlereceivefrom">handleReceiveFrom</h3>
+<p><code>void handleReceiveFrom(const asio::error_code &amp;errCode, std::size_t bytesReceived)</code></p>
+<p>Handles the received packet type. This function is called from the asynchronous receiver function from Asio <code>socket.async_receive_from</code>.</p>
+<h3 id="receive">receive</h3>
+<p><code>void receive()</code></p>
+<p>Start the asynchronous receive operations.</p>
+<h3 id="startserver">startServer</h3>
+<p><code>void startServer()</code></p>
+<p>Start the server and calls everything required. This function should be the only one called outside.</p>
+<h3 id="signalhandler">signalHandler</h3>
+<p><code>static void signalHandler(int signum)</code></p>
+<p>Handles the signal events.</p>
+<h3 id="addclient">addClient</h3>
+<p><code>std::string addClient()</code></p>
+<p>Adds a new client to the client lists and returns its new UUID.</p>
 
 
 
