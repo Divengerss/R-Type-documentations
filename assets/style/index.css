@@ -5,10 +5,16 @@
     --header-text-color: hsl(0, 0%, 92%);
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url(../font/Roboto-Regular.ttf) format('truetype');
+}
+
 body
 {
     background-color: var(--body-bg-col);
     padding: 0px;
+    margin: 0px;
 }
 
 .header
@@ -35,4 +41,5 @@ body
     margin-left: 20px;
     display: inline-block;
     vertical-align: middle;
+    font-family: Roboto;
 }
