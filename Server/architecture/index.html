@@ -9,20 +9,22 @@
       
       
       
+        <link rel="prev" href="../../client/">
       
-        <link rel="next" href="client/">
+      
+        <link rel="next" href="../protocol/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
     
     
       
-        <title>R-Type Networked</title>
+        <title>Architecture - R-Type Networked</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.b2ea3d00.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.b2ea3d00.min.css">
       
       
 
@@ -41,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,11 +64,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#overview" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -79,7 +76,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="R-Type Networked" class="md-header__button md-logo" aria-label="R-Type Networked" data-md-component="logo">
+    <a href="../.." title="R-Type Networked" class="md-header__button md-logo" aria-label="R-Type Networked" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -99,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Architecture
             
           </span>
         </div>
@@ -171,7 +168,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="R-Type Networked" class="md-nav__button md-logo" aria-label="R-Type Networked" data-md-component="logo">
+    <a href="../.." title="R-Type Networked" class="md-nav__button md-logo" aria-label="R-Type Networked" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -186,29 +183,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -217,61 +194,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tech-stack" class="md-nav__link">
-    Tech Stack
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authors" class="md-nav__link">
-    Authors
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -282,7 +204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="client/" class="md-nav__link">
+      <a href="../../client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -299,18 +221,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -324,7 +248,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Server
@@ -335,9 +259,16 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="Server/architecture/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -346,6 +277,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -357,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Server/protocol/" class="md-nav__link">
+      <a href="../protocol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -395,51 +327,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tech-stack" class="md-nav__link">
-    Tech Stack
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authors" class="md-nav__link">
-    Authors
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -454,38 +341,9 @@
                   
 
 
-<h1 align="center">
-  R-Type Networked
-</h1>
+  <h1>Architecture</h1>
 
-<h1 id="overview">Overview</h1>
-<p>R-Type is a horizontally scrolling shooter arcade video game developed and released by Irem in 1987 and the first game in the R-Type series. The player controls a star ship, the R-9 "Arrowhead", in its efforts to destroy the Bydo, a powerful alien race bent on wiping out all of mankind.</p>
-<p>Source: <a href="https://en.wikipedia.org/wiki/R-Type">Wikipedia</a></p>
-<h2 id="installation">Installation</h2>
-<p>Installation process uses <a href="https://github.com/microsoft/vcpkg/tree/master">vcpkg</a> to install its depedencies.</p>
-<p>We provided Installation scripts to help you install everything.</p>
-<p>Simply run <code>install.sh</code> on Linux or <code>install.bat</code> on Windows.</p>
-<p>To compile the programs <code>r-type_client</code> and <code>r-type_server</code>:</p>
-<pre><code class="language-bash">  $&gt; cmake -S . -B Build/
-  $&gt; make -C Build/ -j
-</code></pre>
-<p><em>Note: Make sure you are under the root directory before running the compilation commands.</em></p>
-<h2 id="tech-stack">Tech Stack</h2>
-<p>Both programs use <strong>C++</strong></p>
-<p><strong>Client:</strong> <a href="https://www.sfml-dev.org/documentation/2.6.0/index.php">SFML</a></p>
-<p><strong>Server:</strong> <a href="https://think-async.com/Asio/asio-1.28.0/doc/asio/overview/basics.html">Asio</a></p>
-<p><em>Note: Has it is required to communicate with the server, the client also uses Asio.</em></p>
-<h2 id="documentation">Documentation</h2>
-<p>Documentations can be found <a href="https://divengerss.github.io/R-Type-documentations/">here</a></p>
-<h2 id="license">License</h2>
-<p><a href="https://github.com/EpitechPromo2026/B-CPP-500-PAR-5-1-rtype-julian.emery/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-green.svg" /></a></p>
-<h2 id="authors">Authors</h2>
-<ul>
-<li><a href="https://github.com/Divengerss">@Divengerss</a></li>
-<li><a href="https://github.com/M4KS0U">@M4KS0U</a></li>
-<li><a href="https://github.com/JulianEmr">@JulianEmr</a></li>
-<li><a href="https://github.com/JulesLevi">@JulesLevi</a></li>
-</ul>
+
 
 
 
@@ -523,10 +381,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.726fbb30.min.js"></script>
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
       
     
   </body>
