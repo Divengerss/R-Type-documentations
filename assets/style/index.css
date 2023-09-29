@@ -1,0 +1,16 @@
+:root
+{
+    --header-bg-color: #334191;
+    --body-bg-col: #252632;
+}
+
+body
+{
+    background-color: var(--body-bg-col);
+}
+
+.header
+{
+    margin: 0;
+    background-color: var(--header-bg-color);
+}
