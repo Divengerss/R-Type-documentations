@@ -12,7 +12,7 @@ struct connectionRequest
     }
     connectionRequest(uint8_t status, const std::string &cliUuid) : status(status)
     {
-        std::memcpy(&uuid, cliUuid.data(), UUID_SIZE);
+        std::memmove(&uuid, cliUuid.data(), UUID_SIZE);
     }
 };
 ```

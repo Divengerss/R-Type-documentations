@@ -8,7 +8,7 @@ struct disconnectionRequest
 
     disconnectionRequest(const std::string &cliUuid) : status(REQUEST)
     {
-        std::memcpy(&uuid, cliUuid.data(), UUID_SIZE);
+        std::memmove(&uuid, cliUuid.data(), UUID_SIZE);
     }
     disconnectionRequest(uint8_t status) : status(status) {}
 };
