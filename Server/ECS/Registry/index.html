@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../ECS/SparseArray/">
+        <link rel="prev" href="../Entity/">
       
       
-        <link rel="next" href="../Packets/connection_request/">
+        <link rel="next" href="../SparseArray/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Binary protocol - R-Type Networked</title>
+        <title>Registry - R-Type Networked</title>
       
     
     
@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#registry" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Binary protocol
+              Registry
             
           </span>
         </div>
@@ -282,18 +287,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -307,7 +314,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             ECS
@@ -320,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/Component/" class="md-nav__link">
+      <a href="../Component/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -340,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/Entity/" class="md-nav__link">
+      <a href="../Entity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -358,9 +365,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ECS/Registry/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Registry
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -369,6 +396,93 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    Constructor
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registry_1" class="md-nav__link">
+    Registry()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register_components" class="md-nav__link">
+    register_components()
+  </a>
+  
+    <nav class="md-nav" aria-label="register_components()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_components" class="md-nav__link">
+    get_components()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_components_1" class="md-nav__link">
+    get_components()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -380,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/SparseArray/" class="md-nav__link">
+      <a href="../SparseArray/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,20 +520,18 @@
                 
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -433,7 +545,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Protocol
@@ -444,16 +556,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Protocol/binary_protocol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +567,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -510,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Packets/connection_request/" class="md-nav__link">
+      <a href="../../Protocol/Packets/connection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Packets/disconnection_request/" class="md-nav__link">
+      <a href="../../Protocol/Packets/disconnection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,6 +688,83 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    Constructor
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registry_1" class="md-nav__link">
+    Registry()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register_components" class="md-nav__link">
+    register_components()
+  </a>
+  
+    <nav class="md-nav" aria-label="register_components()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_components" class="md-nav__link">
+    get_components()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_components_1" class="md-nav__link">
+    get_components()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -598,44 +779,117 @@
                   
 
 
-  <h1>Binary protocol</h1>
-
-<p>Communication between the server and the players/clients is done using binary packets.</p>
-<p>A packet on its own contains a header and its data to transmit.
-The header contains the type of packet sent and the size of the following data.
-By default (if unchanged in the code) the packet size locally is limited to 1024 bytes.</p>
-<p>Here is the packet header structure defined in the Packet.hpp</p>
-<pre><code class="language-cpp">struct packetHeader
+<h1 id="registry">Registry</h1>
+<p>A Registry is the core class of the ECS, which stores the differents <a href="../SparseArray/">SparseArrays</a> in an <code>unordered_map</code>, using the type of the <a href="../Component/">Component</a> stored in the <a href="../SparseArray/">SparseArray</a> as the index in the associative array.</p>
+<p>When a <a href="../SparseArray/">SparseArray</a> is created, it creates multiple functions:
+    - a function that allows us to delete the <a href="../Component/">Component</a> of a given <a href="../Entity/">Entity</a> (stored in _erase_functions).
+    - a function that allows us to add a new <a href="../Entity/">Entity</a> to the array (stored in _add_functions).</p>
+<p>There is also the <a href="../Entity/">Entity</a> management part in the Registry, to create, delete and update the differents <a href="../Component/">Components</a> of the <a href="../Entity/">Entity</a>.</p>
+<p>The Registry class looks like this:</p>
+<pre><code class="language-cpp">class Registry
 {
-    packetTypes type;
-    std::uint16_t dataSize;
+public:
+    Registry(){};
 
-    packetHeader() : type(PLACEHOLDER), dataSize(0) {}
-    packetHeader(packetTypes type, std::uint16_t dataSize) : type(type), dataSize(dataSize) {}
+    template &lt;class Component&gt;
+    sparse_array&lt;Component&gt; &amp;register_component();
+
+    template &lt;class Component&gt;
+    sparse_array&lt;Component&gt; &amp;get_components();
+
+    template &lt;class Component&gt;
+    sparse_array&lt;Component&gt; const &amp;get_components() const;
+
+    // #########################################################
+    // #                 ENTITY MANAGEMENT                     #
+    // #########################################################
+
+    Entity spawn_entity();
+    void kill_entity(Entity const &amp;e)
+
+    template &lt;typename Component&gt;
+    typename sparse_array&lt;Component&gt;::reference_type add_component(Entity const &amp;to, Component &amp;&amp;c);
+
+    template &lt;typename Component, typename... Params&gt;
+    typename sparse_array&lt;Component&gt;::reference_type emplace_component(Entity const &amp;to, Params &amp;&amp;...p);
+
+    template &lt;typename Component&gt;
+    void remove_component(Entity const &amp;from);
+
+private:
+    std::unordered_map&lt;std::type_index, std::any&gt; _components_arrays;
+    std::unordered_map&lt;std::type_index, std::function&lt;void(Registry &amp;, Entity const &amp;)&gt;&gt; _erase_functions;
+    std::unordered_map&lt;std::type_index, std::function&lt;void(Registry &amp;)&gt;&gt; _add_functions;
+    std::list&lt;int&gt; _empty_entities;
 };
 </code></pre>
-<p>This can be interpreted as the following pseudo-code</p>
-<pre><code class="language-pseudo-code">HEADER
-{
-    INTEGER type
-    16BIT UNSIGNED INTEGER size_of_the_data
-}
+<h2 id="constructor">Constructor</h2>
+<h3 id="registry_1">Registry()</h3>
+<pre><code class="language-cpp">Registry()
 </code></pre>
-<p>The <code>packetTypes type</code> refers to the following <code>Enum</code></p>
-<pre><code class="language-cpp">enum packetTypes
-{
-    PLACEHOLDER,
-    CONNECTION_REQUEST,
-    DISCONNECTION_REQUEST,
-};
+<p>Default constructor of Registry</p>
+<h2 id="functions">Functions</h2>
+<h3 id="register_components">register_components()</h3>
+<pre><code class="language-cpp">template &lt;class Component&gt;
+sparse_array&lt;Component&gt; &amp;register_component();
 </code></pre>
-<p>The <code>std::uint16_t dataSize</code> stores an unsigned 16bits integer refering to the packet data size to be read from the recipient. Data must be strictly identical to the data size, if the value if lower than its actual size, it will be truncated, leading to undefined behavior. If the value is greather than its actual size, it will mostly crash or leads to buffer overflow, leading to undefined behavior. If the type is set to <code>PLACEHOLDER</code>, no data is expected to be read, setting the <code>dataSize</code> to 0.</p>
-<p>Packet header contains contructors to initialize the header with given values.</p>
-<p>Packet lists:</p>
-<ul>
-<li><a href="">Connection request</a></li>
-<li><a href="">Disconnection request</a></li>
-</ul>
+<p>Creates and adds a <a href="../SparseArray/">SparseArray</a> using the given <a href="../Component/">Component</a> in the Registry, and returns it.</p>
+<h4 id="usage">Usage</h4>
+<pre><code class="language-cpp">SparseArray velocity = Registry.register_component&lt;Velocity&gt;();
+</code></pre>
+<p>Here the Velocity parameter is a <a href="../Component/">Component</a>.</p>
+<h3 id="get_components">get_components()</h3>
+<pre><code class="language-cpp">template &lt;class Component&gt;
+sparse_array&lt;Component&gt; &amp;get_components();
+</code></pre>
+<p>Returns the <a href="../SparseArray/">SparseArray</a> of the given <a href="../Component/">Component</a>.</p>
+<h3 id="get_components_1">get_components()</h3>
+<pre><code class="language-cpp">template &lt;class Component&gt;
+sparse_array&lt;Component&gt; const &amp;get_components() const;
+</code></pre>
+<p>Same but returns a const <a href="../SparseArray/">SparseArray</a> of the given <a href="../Component/">Component</a>.</p>
+<h1 id="entity-management">Entity management</h1>
+<h2 id="functions_1">Functions</h2>
+<h3 id="spawn_entity">spawn_entity()</h3>
+<pre><code class="language-cpp">Entity spawn_entity();
+</code></pre>
+<p>Creates a new <a href="../Entity/">Entity</a>, by using the index of a previously deleted <a href="../Entity/">Entity</a> (using <code>_empty_entities</code>), or by calling <code>_add_functions</code> on every <a href="../SparseArray/">SparseArray</a> existing, and returns an <a href="../Entity/">Entity</a> containing the index.</p>
+<h3 id="kill_entity">kill_entity()</h3>
+<pre><code class="language-cpp">void kill_entity(Entity const &amp;e);
+</code></pre>
+<p>Deletes the <a href="../Entity/">Entity</a>, by calling <code>_delete_functions</code> on every <a href="../SparseArray/">SparseArray</a>, and adds the index of the newly deleted <a href="../Entity/">Entity</a> in <code>_empty_entities</code>.</p>
+<h3 id="add_component">add_component()</h3>
+<pre><code class="language-cpp">template &lt;typename Component&gt;
+typename sparse_array&lt;Component&gt;::reference_type add_component(Entity const &amp;to, Component &amp;&amp;c);
+</code></pre>
+<p>Adds a value at the given index (<a href="../Entity/">Entity</a>) to the <a href="../SparseArray/">SparseArray</a> corresponding to the given <a href="../Component/">Component</a>.</p>
+<h3 id="emplace_component">emplace_component()</h3>
+<pre><code class="language-cpp">template &lt;typename Component, typename... Params&gt;
+typename sparse_array&lt;Component&gt;::reference_type emplace_component(Entity const &amp;to, Params &amp;&amp;...p);
+</code></pre>
+<p>Same, but moves the value instead of copying it.</p>
+<h3 id="remove_component">remove_component()</h3>
+<pre><code class="language-cpp">template &lt;typename Component&gt;
+void remove_component(Entity const &amp;from);
+</code></pre>
+<p>Removes the value at the given index (<a href="../Entity/">Entity</a>) from the <a href="../SparseArray/">SparseArray</a> corresponding to the given <a href="../Component/">Component</a>;</p>
+<h2 id="values">Values</h2>
+<h3 id="_components_arrays">_components_arrays</h3>
+<pre><code class="language-cpp">std::unordered_map&lt;std::type_index, std::any&gt; _components_arrays;
+</code></pre>
+<p>Stores the different <a href="../SparseArray/">SparseArrays</a>.</p>
+<h3 id="_erase_functions">_erase_functions</h3>
+<pre><code class="language-cpp">std::unordered_map&lt;std::type_index, std::function&lt;void(Registry &amp;, Entity const &amp;)&gt;&gt; _erase_functions;
+</code></pre>
+<p>Stores the erase functions created when creating a new <a href="../SparseArray/">SparseArray</a>, using the type of <a href="../Component/">Component</a> as the index.</p>
+<h3 id="_add_functions">_add_functions</h3>
+<pre><code class="language-cpp">std::unordered_map&lt;std::type_index, std::function&lt;void(Registry &amp;)&gt;&gt; _add_functions;
+</code></pre>
+<p>Stores the add functions created when creating a new <a href="../SparseArray/">SparseArray</a>, using the type of <a href="../Component/">Component</a> as the index.</p>
+<h3 id="_empty_entities">_empty_entities</h3>
+<pre><code class="language-cpp">std::list&lt;int&gt; _empty_entities;
+</code></pre>
+<p>Stores the list of empty indexes, used to manage memory cache more efficiently</p>
 
 
 
