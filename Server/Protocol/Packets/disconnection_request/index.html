@@ -616,7 +616,7 @@
 
     disconnectionRequest(const std::string &amp;cliUuid) : status(REQUEST)
     {
-        std::memcpy(&amp;uuid, cliUuid.data(), UUID_SIZE);
+        std::memmove(&amp;uuid, cliUuid.data(), UUID_SIZE);
     }
     disconnectionRequest(uint8_t status) : status(status) {}
 };

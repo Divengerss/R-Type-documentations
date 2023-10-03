@@ -622,7 +622,7 @@
     }
     connectionRequest(uint8_t status, const std::string &amp;cliUuid) : status(status)
     {
-        std::memcpy(&amp;uuid, cliUuid.data(), UUID_SIZE);
+        std::memmove(&amp;uuid, cliUuid.data(), UUID_SIZE);
     }
 };
 </code></pre>
