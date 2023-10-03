@@ -8,6 +8,8 @@ Every network codes are under the `net` namespace included in the `Netcode.hpp`.
 To instantiate a new server, simply call the `Server` class constructor and calls `startServer()` to start the server.
 Just by doing that will run your server properly. However, you need to keep your program open or the server will close itself if the main returns.
 
+![Architecture](architecture.png)
+
 Here is an example of implementation
 ```cpp
 #include "Netcode.hpp"
@@ -30,7 +32,7 @@ The server constructor needs an Asio context and service. Those are used to run 
 
 Simply instanciate and pass them to the ctor.
 
-# CFG Config files
+## CFG Config files
 The configuration file is required to run the server with modified settings.
 It provides the host and port to listen to.
 
@@ -45,7 +47,8 @@ host=127.0.0.1
 port=12346
 ```
 
-# Constructors/Destructors
+
+## Constructors/Destructors
 ### Server default ctor
 `Server() = delete`
 
@@ -63,7 +66,8 @@ If unchanged in the code, they will be 127.0.0.1 for the host and 12346 for the 
 
 The `Server` class destructor.
 
-# Getters
+
+## Getters
 ### getIoContext
 `asio::io_context &getIoContext() const noexcept`
 
@@ -104,7 +108,8 @@ Returns the Asio error code. This value is set whenever an error occures in the 
 
 Returns the connected clients list as an unordered map. The key corresponds to the UUID of the client and the value its endpoint.
 
-# Setters
+
+## Setters
 ### setHost
 `void setHost(const std::string &host)`
 
