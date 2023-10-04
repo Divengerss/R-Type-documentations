@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../ECS/SparseArray/">
+        <link rel="prev" href="../Component/">
       
       
-        <link rel="next" href="../Packets/connection_request/">
+        <link rel="next" href="../Registry/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Binary protocol - R-Type Networked</title>
+        <title>Entity - R-Type Networked</title>
       
     
     
@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#entity" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Binary protocol
+              Entity
             
           </span>
         </div>
@@ -282,18 +287,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -307,7 +314,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             ECS
@@ -320,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/Component/" class="md-nav__link">
+      <a href="../Component/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -338,9 +345,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ECS/Entity/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Entity
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -349,6 +376,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    Constructor
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity_1" class="md-nav__link">
+    Entity()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    Operator
+  </a>
+  
+    <nav class="md-nav" aria-label="Operator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size_t" class="md-nav__link">
+    size_t()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    Value
+  </a>
+  
+    <nav class="md-nav" aria-label="Value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size_t-_size" class="md-nav__link">
+    size_t _size
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -360,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/Registry/" class="md-nav__link">
+      <a href="../Registry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/SparseArray/" class="md-nav__link">
+      <a href="../SparseArray/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,20 +513,18 @@
                 
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -433,7 +538,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Protocol
@@ -444,16 +549,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Protocol/binary_protocol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +560,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -510,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Packets/connection_request/" class="md-nav__link">
+      <a href="../../Protocol/Packets/connection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Packets/disconnection_request/" class="md-nav__link">
+      <a href="../../Protocol/Packets/disconnection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,6 +681,76 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    Constructor
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entity_1" class="md-nav__link">
+    Entity()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    Operator
+  </a>
+  
+    <nav class="md-nav" aria-label="Operator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size_t" class="md-nav__link">
+    size_t()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    Value
+  </a>
+  
+    <nav class="md-nav" aria-label="Value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size_t-_size" class="md-nav__link">
+    size_t _size
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -598,44 +765,39 @@
                   
 
 
-  <h1>Binary protocol</h1>
-
-<p>Communication between the server and the players/clients is done using binary packets.</p>
-<p>A packet on its own contains a header and its data to transmit.
-The header contains the type of packet sent and the size of the following data.
-By default (if unchanged in the code) the packet size locally is limited to 1024 bytes.</p>
-<p>Here is the packet header structure defined in the Packet.hpp</p>
-<pre><code class="language-cpp">struct packetHeader
-{
-    packetTypes type;
-    std::uint16_t dataSize;
-
-    packetHeader() : type(PLACEHOLDER), dataSize(0) {}
-    packetHeader(packetTypes type, std::uint16_t dataSize) : type(type), dataSize(dataSize) {}
+<h1 id="entity">Entity</h1>
+<p>The concept of Entity in an ECS is very different from a classical Entity class that can be found in other Game Engines, but it is very simple to understand.</p>
+<p>An Entity is just a number, that correspond to a position in the differents arrays of <a href="../Component/">Components</a> stored in the <a href="../Registry/">Registry</a>.</p>
+<p>Here is a schema explaining how we retrieve values from the Entity index:</p>
+<p><img alt="Name of the image" src="../entity.png" /></p>
+<p>The class Entity looks like this:</p>
+<pre><code class="language-cpp">class Entity {
+    public:
+        explicit Entity(size_t size) {};
+        operator size_t() const {
+            return _size;
+        };
+    protected:
+    private:
+        size_t _size;
 };
 </code></pre>
-<p>This can be interpreted as the following pseudo-code</p>
-<pre><code class="language-pseudo-code">HEADER
-{
-    INTEGER type
-    16BIT UNSIGNED INTEGER size_of_the_data
-}
+<h2 id="constructor">Constructor</h2>
+<h3 id="entity_1">Entity()</h3>
+<pre><code class="language-cpp">explicit Entity(size_t size) {}
 </code></pre>
-<p>The <code>packetTypes type</code> refers to the following <code>Enum</code></p>
-<pre><code class="language-cpp">enum packetTypes
-{
-    PLACEHOLDER,
-    CONNECTION_REQUEST,
-    DISCONNECTION_REQUEST,
-};
+<p>This constructors allows the Entity class to be constructed from a size_t value like this:
+Entity e = 13;</p>
+<h2 id="operator">Operator</h2>
+<h3 id="size_t">size_t()</h3>
+<pre><code class="language-cpp">operator size_t() const
 </code></pre>
-<p>The <code>std::uint16_t dataSize</code> stores an unsigned 16bits integer refering to the packet data size to be read from the recipient. Data must be strictly identical to the data size, if the value if lower than its actual size, it will be truncated, leading to undefined behavior. If the value is greather than its actual size, it will mostly crash or leads to buffer overflow, leading to undefined behavior. If the type is set to <code>PLACEHOLDER</code>, no data is expected to be read, setting the <code>dataSize</code> to 0.</p>
-<p>Packet header contains contructors to initialize the header with given values.</p>
-<p>Packet lists:</p>
-<ul>
-<li><a href="">Connection request</a></li>
-<li><a href="">Disconnection request</a></li>
-</ul>
+<p>Returns the <code>size_t</code> value of the Entity</p>
+<h2 id="value">Value</h2>
+<h3 id="size_t-_size">size_t _size</h3>
+<pre><code class="language-cpp">size_t _size
+</code></pre>
+<p>The "index" of the Entity in the <a href="../Registry/">Registry</a></p>
 
 
 

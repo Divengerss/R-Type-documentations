@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../ECS/SparseArray/">
+        <link rel="prev" href="../../architecture/">
       
       
-        <link rel="next" href="../Packets/connection_request/">
+        <link rel="next" href="../Entity/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Binary protocol - R-Type Networked</title>
+        <title>Component - R-Type Networked</title>
       
     
     
@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#component" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Binary protocol
+              Component
             
           </span>
         </div>
@@ -282,18 +287,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -307,7 +314,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             ECS
@@ -318,9 +325,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ECS/Component/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -329,6 +345,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -340,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/Entity/" class="md-nav__link">
+      <a href="../Entity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -360,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/Registry/" class="md-nav__link">
+      <a href="../Registry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/SparseArray/" class="md-nav__link">
+      <a href="../SparseArray/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,20 +423,18 @@
                 
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -433,7 +448,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Protocol
@@ -444,16 +459,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Protocol/binary_protocol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +470,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -510,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Packets/connection_request/" class="md-nav__link">
+      <a href="../../Protocol/Packets/connection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Packets/disconnection_request/" class="md-nav__link">
+      <a href="../../Protocol/Packets/disconnection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,6 +591,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -598,44 +607,28 @@
                   
 
 
-  <h1>Binary protocol</h1>
-
-<p>Communication between the server and the players/clients is done using binary packets.</p>
-<p>A packet on its own contains a header and its data to transmit.
-The header contains the type of packet sent and the size of the following data.
-By default (if unchanged in the code) the packet size locally is limited to 1024 bytes.</p>
-<p>Here is the packet header structure defined in the Packet.hpp</p>
-<pre><code class="language-cpp">struct packetHeader
-{
-    packetTypes type;
-    std::uint16_t dataSize;
-
-    packetHeader() : type(PLACEHOLDER), dataSize(0) {}
-    packetHeader(packetTypes type, std::uint16_t dataSize) : type(type), dataSize(dataSize) {}
-};
-</code></pre>
-<p>This can be interpreted as the following pseudo-code</p>
-<pre><code class="language-pseudo-code">HEADER
-{
-    INTEGER type
-    16BIT UNSIGNED INTEGER size_of_the_data
+<h1 id="component">Component</h1>
+<p>The Component class is a template, that can be modified to match any requirements.</p>
+<p>For example, a Destroyable component could look like this:</p>
+<pre><code class="language-cpp">class Destroyable {
+    public:
+        Destroyable();
+        ~Destroyable();
+    private:
+        bool _destroyable;
 }
 </code></pre>
-<p>The <code>packetTypes type</code> refers to the following <code>Enum</code></p>
-<pre><code class="language-cpp">enum packetTypes
-{
-    PLACEHOLDER,
-    CONNECTION_REQUEST,
-    DISCONNECTION_REQUEST,
-};
+<p>And a Position component can look like this:</p>
+<pre><code class="language-cpp">class Position {
+    public:
+        Position();
+        ~Position();
+    private:
+        float _x;
+        float _y;
+}
 </code></pre>
-<p>The <code>std::uint16_t dataSize</code> stores an unsigned 16bits integer refering to the packet data size to be read from the recipient. Data must be strictly identical to the data size, if the value if lower than its actual size, it will be truncated, leading to undefined behavior. If the value is greather than its actual size, it will mostly crash or leads to buffer overflow, leading to undefined behavior. If the type is set to <code>PLACEHOLDER</code>, no data is expected to be read, setting the <code>dataSize</code> to 0.</p>
-<p>Packet header contains contructors to initialize the header with given values.</p>
-<p>Packet lists:</p>
-<ul>
-<li><a href="">Connection request</a></li>
-<li><a href="">Disconnection request</a></li>
-</ul>
+<p>It is important to understand that the Component class is only used to store values, and should not have any functions.</p>
 
 
 

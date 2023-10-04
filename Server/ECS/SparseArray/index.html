@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../ECS/SparseArray/">
+        <link rel="prev" href="../Registry/">
       
       
-        <link rel="next" href="../Packets/connection_request/">
+        <link rel="next" href="../../Protocol/binary_protocol/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Binary protocol - R-Type Networked</title>
+        <title>SparseArray - R-Type Networked</title>
       
     
     
@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sparsearray" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Binary protocol
+              SparseArray
             
           </span>
         </div>
@@ -282,18 +287,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -307,7 +314,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             ECS
@@ -320,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/Component/" class="md-nav__link">
+      <a href="../Component/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -340,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/Entity/" class="md-nav__link">
+      <a href="../Entity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -360,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ECS/Registry/" class="md-nav__link">
+      <a href="../Registry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -378,9 +385,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ECS/SparseArray/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SparseArray
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -389,6 +416,183 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructorsdestructor" class="md-nav__link">
+    Constructors/Destructor
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors/Destructor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sparse_array" class="md-nav__link">
+    sparse_array()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparse_arrayconst-sparse_array" class="md-nav__link">
+    sparse_array(const sparse_array)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparse_arrraysparse_array" class="md-nav__link">
+    sparse_arrray(sparse_array &amp;&amp;)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparse_array_1" class="md-nav__link">
+    ~sparse_array()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    &amp;operator=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator_1" class="md-nav__link">
+    &amp;operator=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator_2" class="md-nav__link">
+    &amp;operator[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator_3" class="md-nav__link">
+    &amp;operator[]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert_at" class="md-nav__link">
+    insert_at()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert_at_1" class="md-nav__link">
+    insert_at()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emplace_at" class="md-nav__link">
+    emplace_at()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push_back" class="md-nav__link">
+    push_back()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erase" class="md-nav__link">
+    erase()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_index" class="md-nav__link">
+    get_index()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    Value
+  </a>
+  
+    <nav class="md-nav" aria-label="Value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_data" class="md-nav__link">
+    _data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -406,20 +610,18 @@
                 
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -433,7 +635,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Protocol
@@ -444,16 +646,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Protocol/binary_protocol/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +657,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -510,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Packets/connection_request/" class="md-nav__link">
+      <a href="../../Protocol/Packets/connection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Packets/disconnection_request/" class="md-nav__link">
+      <a href="../../Protocol/Packets/disconnection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,6 +778,173 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructorsdestructor" class="md-nav__link">
+    Constructors/Destructor
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors/Destructor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sparse_array" class="md-nav__link">
+    sparse_array()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparse_arrayconst-sparse_array" class="md-nav__link">
+    sparse_array(const sparse_array)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparse_arrraysparse_array" class="md-nav__link">
+    sparse_arrray(sparse_array &amp;&amp;)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sparse_array_1" class="md-nav__link">
+    ~sparse_array()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operator" class="md-nav__link">
+    &amp;operator=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator_1" class="md-nav__link">
+    &amp;operator=
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator_2" class="md-nav__link">
+    &amp;operator[]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operator_3" class="md-nav__link">
+    &amp;operator[]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert_at" class="md-nav__link">
+    insert_at()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert_at_1" class="md-nav__link">
+    insert_at()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emplace_at" class="md-nav__link">
+    emplace_at()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push_back" class="md-nav__link">
+    push_back()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erase" class="md-nav__link">
+    erase()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_index" class="md-nav__link">
+    get_index()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#value" class="md-nav__link">
+    Value
+  </a>
+  
+    <nav class="md-nav" aria-label="Value">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_data" class="md-nav__link">
+    _data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -598,44 +959,118 @@
                   
 
 
-  <h1>Binary protocol</h1>
-
-<p>Communication between the server and the players/clients is done using binary packets.</p>
-<p>A packet on its own contains a header and its data to transmit.
-The header contains the type of packet sent and the size of the following data.
-By default (if unchanged in the code) the packet size locally is limited to 1024 bytes.</p>
-<p>Here is the packet header structure defined in the Packet.hpp</p>
-<pre><code class="language-cpp">struct packetHeader
+<h1 id="sparsearray">SparseArray</h1>
+<p>The SparseArray is a vector of optional <a href="../Component/">Components</a>.</p>
+<p>For example, a SparseArray named 'Velocity' will be able to store the velocity of each <a href="../Entity/">Entity</a>.
+If an <a href="../Entity/">Entity</a>, for example a wall, doens't need a Velocity component, than the value for this <a href="../Entity/">Entity</a> in the Velocity SparceArray will be empty, hence the "optional Component".</p>
+<p>The class SparseArray looks like this:</p>
+<pre><code class="language-cpp">class sparse_array
 {
-    packetTypes type;
-    std::uint16_t dataSize;
+public:
+    using value_type = std::optional&lt;Component&gt;;
+    using reference_type = value_type &amp;;
+    using const_reference_type = value_type const &amp;;
+    using container_t = std::vector&lt;value_type&gt;;
+    using size_type = typename container_t::size_type;
+    using iterator = typename container_t::iterator;
+    using const_iterator = typename container_t ::const_iterator;
 
-    packetHeader() : type(PLACEHOLDER), dataSize(0) {}
-    packetHeader(packetTypes type, std::uint16_t dataSize) : type(type), dataSize(dataSize) {}
+    sparse_array() {};
+    sparse_array(const sparse_array &amp;other);
+    sparse_array(sparse_array &amp;&amp;other) noexcept;
+    ~sparse_array();
+
+    sparse_array &amp;operator=(const sparse_array &amp;other);
+    sparse_array &amp;operator=(sparse_array &amp;&amp;other) noexcept;
+    reference_type operator[](size_t idx);
+    const_reference_type operator[](size_t idx) const;
+
+    iterator begin();
+    const_iterator begin() const;
+    const_iterator cbegin() const;
+    iterator end();
+    const_iterator end() const;
+    const_iterator cend() const;
+    size_type size() const;
+
+    reference_type insert_at(size_type pos, Component const &amp;value);
+    reference_type insert_at(size_type pos, Component &amp;&amp;value);
+    template &lt;class... Params&gt;
+    reference_type emplace_at(size_type pos, Params &amp;&amp;...data);
+    reference_type push_back(std::optional&lt;Component&gt; &amp;&amp;value);
+    void erase(size_type pos);
+    size_type get_index(value_type const &amp;value) const;
+
+private:
+    container_t _data;
 };
 </code></pre>
-<p>This can be interpreted as the following pseudo-code</p>
-<pre><code class="language-pseudo-code">HEADER
-{
-    INTEGER type
-    16BIT UNSIGNED INTEGER size_of_the_data
-}
+<h2 id="constructorsdestructor">Constructors/Destructor</h2>
+<h3 id="sparse_array">sparse_array()</h3>
+<pre><code class="language-cpp">sparse_array() {};
 </code></pre>
-<p>The <code>packetTypes type</code> refers to the following <code>Enum</code></p>
-<pre><code class="language-cpp">enum packetTypes
-{
-    PLACEHOLDER,
-    CONNECTION_REQUEST,
-    DISCONNECTION_REQUEST,
-};
+<p>The default constructor of the SparseArray class.</p>
+<h3 id="sparse_arrayconst-sparse_array">sparse_array(const sparse_array)</h3>
+<pre><code class="language-cpp">sparse_array(const sparse_array &amp;other);
 </code></pre>
-<p>The <code>std::uint16_t dataSize</code> stores an unsigned 16bits integer refering to the packet data size to be read from the recipient. Data must be strictly identical to the data size, if the value if lower than its actual size, it will be truncated, leading to undefined behavior. If the value is greather than its actual size, it will mostly crash or leads to buffer overflow, leading to undefined behavior. If the type is set to <code>PLACEHOLDER</code>, no data is expected to be read, setting the <code>dataSize</code> to 0.</p>
-<p>Packet header contains contructors to initialize the header with given values.</p>
-<p>Packet lists:</p>
-<ul>
-<li><a href="">Connection request</a></li>
-<li><a href="">Disconnection request</a></li>
-</ul>
+<p>The copy constructor of the SparseArray class.</p>
+<h3 id="sparse_arrraysparse_array">sparse_arrray(sparse_array &amp;&amp;)</h3>
+<pre><code class="language-cpp">sparse_array(sparse_array &amp;&amp;other) noexcept;
+</code></pre>
+<p>The move constructor of the SparseArray class.</p>
+<h3 id="sparse_array_1">~sparse_array()</h3>
+<pre><code class="language-cpp">~sparse_array();
+</code></pre>
+<p>The default destructor of the SparseArray class.</p>
+<h2 id="operators">Operators</h2>
+<h3 id="operator">&amp;operator=</h3>
+<pre><code class="language-cpp">sparse_array &amp;operator=(const sparse_array &amp;other);
+</code></pre>
+<p>The copy assignment operator of the SparseArray class.</p>
+<h3 id="operator_1">&amp;operator=</h3>
+<pre><code class="language-cpp">sparse_array &amp;operator=(sparse_array &amp;&amp;other) noexcept;
+</code></pre>
+<p>The move assignment operator of the SparseArray class.</p>
+<h3 id="operator_2">&amp;operator[]</h3>
+<pre><code class="language-cpp">reference_type operator[](size_t idx);
+</code></pre>
+<p>Takes the index of a <a href="../Entity/">Entity</a> and returns a reference to the value contained in the array for this entity.</p>
+<h3 id="operator_3">&amp;operator[]</h3>
+<pre><code class="language-cpp">const_reference_type operator[](size_t idx) const;
+</code></pre>
+<p>Same but returns a const reference instead of a reference.</p>
+<h2 id="functions">Functions</h2>
+<h3 id="insert_at">insert_at()</h3>
+<pre><code class="language-cpp">reference_type insert_at(size_type pos, Component const &amp;value);
+</code></pre>
+<p>Inserts the value at the specified position, and returns the reference to the value.</p>
+<h3 id="insert_at_1">insert_at()</h3>
+<pre><code class="language-cpp">reference_type insert_at(size_type pos, Component &amp;&amp;value);
+</code></pre>
+<p>Same but moves the value instead of copying it.</p>
+<h3 id="emplace_at">emplace_at()</h3>
+<pre><code class="language-cpp">template &lt;class... Params&gt;
+reference_type emplace_at(size_type pos, Params &amp;&amp;...data);
+</code></pre>
+<p>Same as <code>insert_at</code> but moves the value instead of copying it.</p>
+<h3 id="push_back">push_back()</h3>
+<pre><code class="language-cpp">reference_type push_back(std::optional&lt;Component&gt; &amp;&amp;value);
+</code></pre>
+<p>Insert the value at the back of the array.</p>
+<h3 id="erase">erase()</h3>
+<pre><code class="language-cpp">void erase(size_type pos);
+</code></pre>
+<p>Erases the value at the specified position.</p>
+<h3 id="get_index">get_index()</h3>
+<pre><code class="language-cpp">size_type get_index(value_type const &amp;value) const;
+</code></pre>
+<p>Take a reference to an optional <a href="../Component/">Component</a>, and return its index.
+Allows us to retreive the index of an <a href="../Entity/">Entity</a> its value.</p>
+<h2 id="value">Value</h2>
+<h3 id="_data">_data</h3>
+<pre><code class="language-cpp">container_t _data
+</code></pre>
+<p>Vector of optional <a href="../Component/">Components</a></p>
 
 
 
