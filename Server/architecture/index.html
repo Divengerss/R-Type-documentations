@@ -213,7 +213,7 @@
         
   
   <span class="md-ellipsis">
-    Client Documentation
+    Client documentation
   </span>
   
 
@@ -523,6 +523,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#removeclient" class="md-nav__link">
+    removeClient
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -759,6 +766,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../Protocol/Packets/client_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Protocol/Packets/connection_request/" class="md-nav__link">
         
   
@@ -784,6 +811,26 @@
   
   <span class="md-ellipsis">
     Disconnection request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Protocol/Packets/placeholder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Placeholder
   </span>
   
 
@@ -1051,6 +1098,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#removeclient" class="md-nav__link">
+    removeClient
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1074,12 +1128,12 @@
 <h1 id="architecture">Architecture</h1>
 <p>The server should be self-explanatory when reading the source code, nevertheless, this documentation provides more details about the server workflow.</p>
 <p>The server uses Asio non-boost C++20 to run.</p>
-<p>Every network codes are under the <code>net</code> namespace included in the <code>Netcode.hpp</code>.</p>
+<p>The network code can be found under the <code>net</code> namespace included in the <code>Network.hpp</code>.</p>
 <p>To instantiate a new server, simply call the <code>Server</code> class constructor and calls <code>startServer()</code> to start the server.
 Just by doing that will run your server properly. However, you need to keep your program open or the server will close itself if the main returns.</p>
 <p><img alt="Architecture" src="../architecture.png" /></p>
 <p>Here is an example of implementation</p>
-<pre><code class="language-cpp">#include &quot;Netcode.hpp&quot;
+<pre><code class="language-cpp">#include &quot;Network.hpp&quot;
 
 int main()
 {
@@ -1189,7 +1243,10 @@ If the <code>cliUuid</code> is set, the packet will only be sent to the given cl
 <p>Handles the signal events.</p>
 <h3 id="addclient">addClient</h3>
 <p><code>std::string addClient()</code></p>
-<p>Adds a new client to the client lists and returns its new UUID.</p>
+<p>Adds a new client to the client list and returns its new UUID.</p>
+<h3 id="removeclient">removeClient</h3>
+<p><code>void removeClient(const std::string &amp;uuid)</code></p>
+<p>Remove a client from the list given the uuid. If the client is not found, the client list remains unmodified.</p>
 
 
 

@@ -12,7 +12,7 @@
         <link rel="prev" href="../../ECS/SparseArray/">
       
       
-        <link rel="next" href="../Packets/connection_request/">
+        <link rel="next" href="../Packets/client_status/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -208,7 +208,7 @@
         
   
   <span class="md-ellipsis">
-    Client Documentation
+    Client documentation
   </span>
   
 
@@ -510,6 +510,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../Packets/client_status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Client status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Packets/connection_request/" class="md-nav__link">
         
   
@@ -535,6 +555,26 @@
   
   <span class="md-ellipsis">
     Disconnection request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Packets/placeholder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Placeholder
   </span>
   
 
@@ -622,19 +662,22 @@ By default (if unchanged in the code) the packet size locally is limited to 1024
 }
 </code></pre>
 <p>The <code>packetTypes type</code> refers to the following <code>Enum</code></p>
-<pre><code class="language-cpp">enum packetTypes
+<pre><code class="language-cpp">enum packetTypes : std::uint8_t
 {
     PLACEHOLDER,
     CONNECTION_REQUEST,
     DISCONNECTION_REQUEST,
+    CLIENT_STATUS,
 };
 </code></pre>
 <p>The <code>std::uint16_t dataSize</code> stores an unsigned 16bits integer refering to the packet data size to be read from the recipient. Data must be strictly identical to the data size, if the value if lower than its actual size, it will be truncated, leading to undefined behavior. If the value is greather than its actual size, it will mostly crash or leads to buffer overflow, leading to undefined behavior. If the type is set to <code>PLACEHOLDER</code>, no data is expected to be read, setting the <code>dataSize</code> to 0.</p>
 <p>Packet header contains contructors to initialize the header with given values.</p>
 <p>Packet lists:</p>
 <ul>
-<li><a href="">Connection request</a></li>
-<li><a href="">Disconnection request</a></li>
+<li><a href="../Packets/placeholder/">Placeholder</a></li>
+<li><a href="../Packets/connection_request/">Connection request</a></li>
+<li><a href="../Packets/disconnection_request/">Disconnection request</a></li>
+<li><a href="../Packets/client_status/">Client status</a></li>
 </ul>
 
 
