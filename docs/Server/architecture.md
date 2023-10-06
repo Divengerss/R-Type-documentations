@@ -3,7 +3,7 @@ The server should be self-explanatory when reading the source code, nevertheless
 
 The server uses Asio non-boost C++20 to run.
 
-Every network codes are under the `net` namespace included in the `Netcode.hpp`.
+The network code can be found under the `net` namespace included in the `Network.hpp`.
 
 To instantiate a new server, simply call the `Server` class constructor and calls `startServer()` to start the server.
 Just by doing that will run your server properly. However, you need to keep your program open or the server will close itself if the main returns.
@@ -12,7 +12,7 @@ Just by doing that will run your server properly. However, you need to keep your
 
 Here is an example of implementation
 ```cpp
-#include "Netcode.hpp"
+#include "Network.hpp"
 
 int main()
 {
@@ -177,4 +177,9 @@ Handles the signal events.
 ### addClient
 `std::string addClient()`
 
-Adds a new client to the client lists and returns its new UUID.
+Adds a new client to the client list and returns its new UUID.
+
+### removeClient
+`void removeClient(const std::string &uuid)`
+
+Remove a client from the list given the uuid. If the client is not found, the client list remains unmodified.

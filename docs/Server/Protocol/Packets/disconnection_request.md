@@ -1,4 +1,5 @@
 # Disconnection request
+
 Type `DISCONNECTION_REQUEST`
 ```cpp
 struct disconnectionRequest

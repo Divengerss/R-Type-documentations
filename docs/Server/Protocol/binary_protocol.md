@@ -27,11 +27,12 @@ HEADER
 
 The `packetTypes type` refers to the following `Enum`
 ```cpp
-enum packetTypes
+enum packetTypes : std::uint8_t
 {
     PLACEHOLDER,
     CONNECTION_REQUEST,
     DISCONNECTION_REQUEST,
+    CLIENT_STATUS,
 };
 ```
 The `std::uint16_t dataSize` stores an unsigned 16bits integer refering to the packet data size to be read from the recipient. Data must be strictly identical to the data size, if the value if lower than its actual size, it will be truncated, leading to undefined behavior. If the value is greather than its actual size, it will mostly crash or leads to buffer overflow, leading to undefined behavior. If the type is set to `PLACEHOLDER`, no data is expected to be read, setting the `dataSize` to 0.
@@ -40,5 +41,7 @@ Packet header contains contructors to initialize the header with given values.
 
 Packet lists:
 
-- [Connection request]()
-- [Disconnection request]()
+- [Placeholder](Packets/placeholder.md)
+- [Connection request](Packets/connection_request.md)
+- [Disconnection request](Packets/disconnection_request.md)
+- [Client status](Packets/client_status.md)

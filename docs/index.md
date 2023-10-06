@@ -35,10 +35,6 @@ Both programs use **C++**
 *Note: Has it is required to communicate with the server, the client also uses Asio.*
 
 
-## Documentation
-
-Documentations can be found [here](https://divengerss.github.io/R-Type-documentations/)
-
 ## License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/EpitechPromo2026/B-CPP-500-PAR-5-1-rtype-julian.emery/blob/main/LICENSE)
