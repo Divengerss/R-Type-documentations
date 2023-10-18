@@ -20,7 +20,7 @@
     
     
       
-        <title>Client documentation - R-Type Networked</title>
+        <title>Client Documentation - R-Type Networked</title>
       
     
     
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Client documentation
+              Client Documentation
             
           </span>
         </div>
@@ -297,15 +297,128 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Client Documentation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Client documentation
+    Client Documentation
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-it" class="md-nav__link">
+    How to use it
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    Networking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-details" class="md-nav__link">
+    Functions details
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systems" class="md-nav__link">
+    Systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    main
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mainmenu" class="md-nav__link">
+    mainMenu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moveup" class="md-nav__link">
+    MoveUp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movedown" class="md-nav__link">
+    MoveDown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rungame" class="md-nav__link">
+    runGame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updatesprite" class="md-nav__link">
+    updateSprite
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -831,6 +944,97 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-it" class="md-nav__link">
+    How to use it
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    Networking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-details" class="md-nav__link">
+    Functions details
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systems" class="md-nav__link">
+    Systems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    main
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mainmenu" class="md-nav__link">
+    mainMenu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moveup" class="md-nav__link">
+    MoveUp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movedown" class="md-nav__link">
+    MoveDown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rungame" class="md-nav__link">
+    runGame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updatesprite" class="md-nav__link">
+    updateSprite
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -844,8 +1048,47 @@
                   
 
 
-<h1 id="client-documentation">Client documentation</h1>
-<p>Coming soon</p>
+<h1 id="client-documentation">Client Documentation</h1>
+<p>Client uses the SFML graphics library, it's coded in C++.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<p>Use command <code>cmake -S . -B Build/</code> then <code>make -C Build/ -j</code> to compile.
+Start the client with the command <code>./Release/r-type_client</code>.</p>
+<h2 id="networking">Networking</h2>
+<p>Client can change IP address and port to connect to the server and the timeout connection time in second. Everything is in the <code>client.cfg</code> file.</p>
+<h2 id="functions-details">Functions details</h2>
+<h3 id="components">Components</h3>
+<p>ActiveBonus : <code>ActiveBonus(int ss = ShootStyle::ONEBULLET, int sb = SpeedBoost::SPEEDNORMAL, int fb = ForceBoost::FORCENORMAL)</code> allows you to have the type of ball, speed and force.</p>
+<p>Animation : <code>Animation(int rect)</code> sets the top-left position of the texture rectangle.</p>
+<p>Audio : <code>Audio(float volume, const std::string &amp;path, bool loop)</code> sets up the volume, the path to the file and the loop.</p>
+<p>Controllable : <code>Controllable(const std::string &amp;playerId)</code> sets up the player's index, if he has one then the entity is controllable.</p>
+<p>Damaging : <code>Damaging(int damages)</code> sets the damage level of the entity.</p>
+<p>Destroyable : <code>Destroyable(int hp)</code> sets up the number of lives of the entity.</p>
+<p>Hitbox : <code>Hitbox(int width, int height)</code> sets up the length and height of the entity.</p>
+<p>MovementPattern : <code>MovementPattern(MovementPatterns movementPattern)</code> indicates the movement pattern of the entity.</p>
+<p>Pickup : <code>Pickup(BonusType bonusType = SpeedBoost, bool positive = true)</code> indicates whether the entity is takeable.</p>
+<p>Position : <code>Position(float x = 0, float y = 0)</code> set up the position of the entity.</p>
+<p>Scale : <code>Scale(float scaleX, float scaleY)</code> set up the enlargement of the entity.</p>
+<p>Text : <code>Text(const std::string &amp;text, int size = 1)</code> set up the text to display and its size.</p>
+<p>Texture : <code>Texture(std::string path, int left, int top, int width, int height)</code> set up the path to the texture file as well as the information concerning the area to display the texture.</p>
+<p>Velocity : <code>Velocity(int velocity)</code> set up the velocity of the entity.</p>
+<h3 id="systems">Systems</h3>
+<p>DamageSystem : <code>void damageSystem(Registry &amp;r, std::map&lt;size_t, std::pair&lt;sf::Sprite, sf::Texture&gt;&gt; &amp;sprites)</code> parse every entity, check if it can take damage, and destroy if damage is higher than life.</p>
+<p>PositionDamage : <code>positionSystemClient(Registry &amp;r, net::Client &amp;client)</code> check if it has any pattern, if not, use keyboard to move entity, otherwise, the entity move automatically.</p>
+<h3 id="main">main</h3>
+<p>Reads a configuration file from the current directory.
+Then extracts the "host" address and port from this configuration file.
+It establishes a network connection with a remote server using this information.
+And runs the game, represented by the rtype::Game object, using the network connection.</p>
+<h3 id="mainmenu">mainMenu</h3>
+<p>It loads the font, the color, the size, and what to write as well as their position.</p>
+<h3 id="moveup">MoveUp</h3>
+<p>Allows you to change the color of the text above when you press the up key and select it.</p>
+<h3 id="movedown">MoveDown</h3>
+<p>Allows you to change the color of the text below when pressing the up key and select it.</p>
+<h3 id="rungame">runGame</h3>
+<p>Register every components needed and create entity with these. Then create a window and check if the page to display is the menu or not.</p>
+<h2 id="updatesprite">updateSprite</h2>
+<p>Receives all entities, paths and sorts as needed, then updates positions, textures and damage.</p>
 
 
 
