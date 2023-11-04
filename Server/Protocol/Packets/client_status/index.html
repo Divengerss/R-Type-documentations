@@ -596,6 +596,70 @@
 
               
             
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_5" id="__nav_4_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ECS/Systems/Network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NetworkSystem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -847,24 +911,24 @@
 
 
 <h1 id="client-status">Client status</h1>
-<p>Type <code>CLIENT_STATUS</code></p>
-<pre><code class="language-cpp">struct clientStatus
-{
-    std::uint8_t status;
-    std::array&lt;std::uint8_t, uuidSize&gt; uuid;
-
-    clientStatus() : status(LOSE_CLIENT) {}
-    clientStatus(const std::string &amp;cliUuid) : status(LOSE_CLIENT)
-    {
-        std::memmove(&amp;uuid, cliUuid.data(), uuidSize);
-    }
-    clientStatus(const std::string &amp;cliUuid, std::uint8_t status) : status(status)
-    {
-        std::memmove(&amp;uuid, cliUuid.data(), uuidSize);
-    }
-};
-</code></pre>
-<p>The client status packet tells the connected client another one connected or disconnected from the server. If a client disconnects, the status is set to LOSE_CLIENT telling all connected clients that the UUID client disconnected. If a client connected to server, the status is set to NEW_CLIENT.</p>
+<p>Type <code>CLIENT_STATUS</code>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">clientStatus</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="p">,</span><span class="w"> </span><span class="n">uuidSize</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uuid</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">clientStatus</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">status</span><span class="p">(</span><span class="n">LOSE_CLIENT</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">clientStatus</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cliUuid</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">status</span><span class="p">(</span><span class="n">LOSE_CLIENT</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">memmove</span><span class="p">(</span><span class="o">&amp;</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="n">cliUuid</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">uuidSize</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">clientStatus</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cliUuid</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">status</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">memmove</span><span class="p">(</span><span class="o">&amp;</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="n">cliUuid</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">uuidSize</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">};</span>
+</span></code></pre></div>
+The client status packet tells the connected client another one connected or disconnected from the server. If a client disconnects, the status is set to LOSE_CLIENT telling all connected clients that the UUID client disconnected. If a client connected to server, the status is set to NEW_CLIENT.</p>
 <p>The client must listen at any time for this type of packet to handle their game properly.</p>
 
 
@@ -903,7 +967,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.sections", "content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../../assets/javascripts/bundle.726fbb30.min.js"></script>

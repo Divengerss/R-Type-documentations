@@ -660,6 +660,70 @@
 
               
             
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_5" id="__nav_4_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Server/ECS/Systems/Network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NetworkSystem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -943,11 +1007,11 @@
 <p>Installation process uses <a href="https://github.com/microsoft/vcpkg/tree/master">vcpkg</a> to install its depedencies.</p>
 <p>We provided Installation scripts to help you install everything.</p>
 <p>Simply run <code>install.sh</code> on Linux or <code>install.bat</code> on Windows.</p>
-<p>To compile the programs <code>r-type_client</code> and <code>r-type_server</code>:</p>
-<pre><code class="language-bash">  $&gt; cmake -S . -B Build/
-  $&gt; make -C Build/ -j
-</code></pre>
-<p><em>Note: Make sure you are under the root directory before running the compilation commands.</em></p>
+<p>To compile the programs <code>r-type_client</code> and <code>r-type_server</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cmake<span class="w"> </span>-S<span class="w"> </span>.<span class="w"> </span>-B<span class="w"> </span>Build/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>make<span class="w"> </span>-C<span class="w"> </span>Build/<span class="w"> </span>-j
+</span></code></pre></div>
+<em>Note: Make sure you are under the root directory before running the compilation commands.</em></p>
 <h2 id="tech-stack">Tech Stack</h2>
 <p>Both programs use <strong>C++</strong></p>
 <p><strong>Client:</strong> <a href="https://www.sfml-dev.org/documentation/2.6.0/index.php">SFML</a></p>
@@ -999,7 +1063,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.sections"], "search": "assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.sections", "content.code.copy", "content.code.select"], "search": "assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.726fbb30.min.js"></script>
