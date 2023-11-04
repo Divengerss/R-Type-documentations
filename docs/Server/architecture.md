@@ -3,7 +3,7 @@ The server should be self-explanatory when reading the source code, nevertheless
 
 The server uses Asio non-boost C++20 to run.
 
-The network code can be found under the `net` namespace included in the `Network.hpp`.
+The network code can be found under the `rtype` namespace included in the `Game.hpp`.
 
 To instantiate a new server, simply call the `Server` class constructor and calls `startServer()` to start the server.
 Just by doing that will run your server properly. However, you need to keep your program open or the server will close itself if the main returns.
@@ -12,31 +12,24 @@ Just by doing that will run your server properly. However, you need to keep your
 
 Here is an example of implementation
 ```cpp
-#include "Network.hpp"
+#include "Game.hpp"
 
 int main()
 {
-    asio::io_context ioContext;
-    asio::io_service ioService;
-
-    net::Server server(ioContext, ioService);
-
-    server.startServer();
+    rtype::loopSystem game;
+    game.runNetwork();
 
     while (true) {
         // Game logics
     }
 }
 ```
-The server constructor needs an Asio context and service. Those are used to run the network context and service from Asio.
-
-Simply instanciate and pass them to the ctor.
 
 ## CFG Config files
 The configuration file is required to run the server with modified settings.
 It provides the host and port to listen to.
 
-Here is the `server.cfg` file located inside the `Release` directory.
+Here is the `server.cfg` file located inside the `resources` directory.
 ```conf
 # Server config file
 
@@ -50,14 +43,9 @@ port=12346
 
 ## Constructors/Destructors
 ### Server default ctor
-`Server() = delete`
+`Network()`
 
-The default constructor of the Server class is deleted to allow better workflow.
-
-### Server ctor
-`Server(asio::io_context &ioContext, asio::io_context &ioService)`
-
-Server class ctor, requires an Asio context as `asio::io_context` and an Asio server as `asio::io_context`.
+Network class ctor.
 The ctor will seek a `.cfg` file for its configuration as mention before. If the file format is corrupted, a value can't be found or the file is missing, the default values are applied.
 If unchanged in the code, they will be 127.0.0.1 for the host and 12346 for the port number
 
@@ -104,10 +92,14 @@ Returns the server socket.
 Returns the Asio error code. This value is set whenever an error occures in the Asio context.
 
 ### getClients
-`const std::unordered_map<std::string, asio::ip::udp::endpoint> &getClients() const noexcept`
+`std::vector<Client> &getClients() const noexcept`
 
-Returns the connected clients list as an unordered map. The key corresponds to the UUID of the client and the value its endpoint.
+Returns the connected clients as a vector of Client class.
 
+### getPacket
+`const std::array<std::uint8_t, packetSize> &getClients() const noexcept`
+
+Returns the last packet received.
 
 ## Setters
 ### setHost
@@ -136,6 +128,29 @@ Set the static variable `serverInstance` used to access class elements from the 
 Sets the packet from a `typename T` template packet, the packet header and its data.
 This function will memory copy the `header` and `data` into the `packet`. The packet must be large enough to hold the header + data sizes.
 
+## Miscellaneous
+### writeToLogs
+`void writeToLogs(const std::string_view &status, const std::string &msg)`
+
+Allows to write into the server log a custom message.
+The Logs.hpp file provided the following definitions for the `status`:
+- logInfo
+- logWarn
+- logErr
+- logGameInfo
+- logGameWarn
+- logGameErr
+
+### isSocketOpen
+`bool isSocketOpen() const noexcept`
+
+Returns true if the socket is open, false otherwise.
+
+### setPacket
+`void setPacket(T &packet, packet::packetHeader &header, T &data)`
+
+Memory moves the header and data into the packet, overwriting the potential existing data in the packet T.
+
 ### fillBufferFromRequest
 `void fillBufferFromRequest(T &packet, std::size_t size)`
 
@@ -143,19 +158,19 @@ Fills the `packet` given as parameter from the private variable `_packet` of the
 This function will memory copy into `packet`.
 
 ### sendResponse
-`void sendResponse(const packet::packetTypes &type, T &packet, const std::string cliUuid = "")`
+`void sendResponse(const packet::packetTypes &type, T &data, std::uint64_t roomId = std::numeric_limits<std::uint64_t>::max(), bool toServerEndpoint = false, const std::string cliUuid = "")`
 
-Builds a packet and sends it to all the clients if no `cliUuid` are provided.
+Builds a packet and sends it to all the clients in the given romm identifier if no `cliUuid` are provided.
 The `packet` must not contains any header as it is generated using the `type` variable and the size of packet.
 If the `cliUuid` is set, the packet will only be sent to the given client UUID. If the UUID is invalid or doesn't link to a valid client, the packet remains unsent.
 
-### handleRequestStatus
-`void handleRequestStatus()`
+### sendSparseArray
+`void sendSparseArray(const packet::packetTypes &type, sparse_array<T> &sparseArray, std::uint64_t roomId, const std::string cliUuid = "")`
 
-Handles each packets type.
+Sends the given ECS sparse array type T to the clients in the room identifier or to a specific client is cliUuid is set.
 
-### handleReceiveFrom
-`void handleReceiveFrom(const asio::error_code &errCode, std::size_t bytesReceived)`
+### receiveCallback
+`void receiveCallback(const asio::error_code &errCode, std::size_t bytesReceived)`
 
 Handles the received packet type. This function is called from the asynchronous receiver function from Asio `socket.async_receive_from`.
 
@@ -167,7 +182,12 @@ Start the asynchronous receive operations.
 ### startServer
 `void startServer()`
 
-Start the server and calls everything required. This function should be the only one called outside.
+Start the server and calls everything required.
+
+### stopServer
+`void stopServer()`
+
+Stop the server properly.
 
 ### signalHandler
 `static void signalHandler(int signum)`
@@ -175,9 +195,9 @@ Start the server and calls everything required. This function should be the only
 Handles the signal events.
 
 ### addClient
-`std::string addClient()`
+`std::string addClient(std::uint64_t roomId)`
 
-Adds a new client to the client list and returns its new UUID.
+Adds a new client to the client list in the given room identifier and returns its new UUID.
 
 ### removeClient
 `void removeClient(const std::string &uuid)`
