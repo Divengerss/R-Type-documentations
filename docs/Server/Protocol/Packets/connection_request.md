@@ -1,4 +1,5 @@
 # Connection request
+
 Type `CONNECTION_REQUEST`
 ```cpp
 struct connectionRequest
