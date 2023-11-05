@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../left_room/">
+        <link rel="prev" href="../room_available/">
       
       
-        <link rel="next" href="../room_available/">
+        <link rel="next" href="../text_message/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Placeholder - R-Type Networked</title>
+        <title>Room Closed - R-Type Networked</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#placeholder" class="md-skip">
+        <a href="#room-closed" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Placeholder
+              Room Closed
             
           </span>
         </div>
@@ -1148,18 +1148,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../placeholder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1168,7 +1159,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1198,9 +1188,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../room_closed/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1209,6 +1208,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1290,9 +1290,17 @@
                   
 
 
-<h1 id="placeholder">Placeholder</h1>
-<p>Type <code>PLACEHOLDER</code></p>
-<p>The placeholder packet doesn't do anything on its own, its usage can be useful to tests connection between clients and server. Only the type of packet is set in the header so <code>dataSize</code> is 0 and no data is set after.</p>
+<h1 id="room-closed">Room Closed</h1>
+<p>Type <code>ROOM_CLOSED</code>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">roomClosed</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">roomId</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">roomClosed</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">roomId</span><span class="p">(</span><span class="mi">0UL</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">roomClosed</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">roomId</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">roomId</span><span class="p">(</span><span class="n">roomId</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">};</span>
+</span></code></pre></div></p>
+<p>The room closed packet tells the roomId has been closed.</p>
 
 
 

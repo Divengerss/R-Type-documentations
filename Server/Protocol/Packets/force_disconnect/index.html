@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../left_room/">
+        <link rel="prev" href="../entity_killed/">
       
       
-        <link rel="next" href="../room_available/">
+        <link rel="next" href="../joined_room/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Placeholder - R-Type Networked</title>
+        <title>Force Disconnect - R-Type Networked</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#placeholder" class="md-skip">
+        <a href="#force-disconnect" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Placeholder
+              Force Disconnect
             
           </span>
         </div>
@@ -1048,9 +1048,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../force_disconnect/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1059,6 +1068,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1148,18 +1158,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../placeholder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1168,7 +1169,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1290,9 +1290,9 @@
                   
 
 
-<h1 id="placeholder">Placeholder</h1>
-<p>Type <code>PLACEHOLDER</code></p>
-<p>The placeholder packet doesn't do anything on its own, its usage can be useful to tests connection between clients and server. Only the type of packet is set in the header so <code>dataSize</code> is 0 and no data is set after.</p>
+<h1 id="force-disconnect">Force Disconnect</h1>
+<p>Type <code>FORCE_DISCONNECT</code></p>
+<p>The force disconnect type is a header only packet telling the client to disconnect.</p>
 
 
 
