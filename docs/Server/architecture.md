@@ -49,10 +49,10 @@ Network class ctor.
 The ctor will seek a `.cfg` file for its configuration as mention before. If the file format is corrupted, a value can't be found or the file is missing, the default values are applied.
 If unchanged in the code, they will be 127.0.0.1 for the host and 12346 for the port number
 
-### ~Server
-`~Server()`
+### ~Network
+`~Network()`
 
-The `Server` class destructor.
+The `Network` class destructor.
 
 
 ## Getters
