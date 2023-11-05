@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../client_status/">
+        <link rel="prev" href="../../SparseArray/">
       
       
-        <link rel="next" href="../create_room/">
+        <link rel="next" href="../../../Protocol/binary_protocol/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Connection request - R-Type Networked</title>
+        <title>NetworkSystem - R-Type Networked</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connection-request" class="md-skip">
+        <a href="#networksystem" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connection request
+              NetworkSystem
             
           </span>
         </div>
@@ -484,18 +484,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -509,7 +511,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             ECS
@@ -522,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ECS/Component/" class="md-nav__link">
+      <a href="../../Component/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -542,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ECS/Entity/" class="md-nav__link">
+      <a href="../../Entity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ECS/How_to_use_the_ECS/" class="md-nav__link">
+      <a href="../../How_to_use_the_ECS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -582,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ECS/Registry/" class="md-nav__link">
+      <a href="../../Registry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,11 +604,416 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ECS/SparseArray/" class="md-nav__link">
+      <a href="../../SparseArray/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     SparseArray
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_6" id="__nav_4_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    NetworkSystem
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    NetworkSystem
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructors-destructors" class="md-nav__link">
+    Constructors / Destructors
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors / Destructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networksystem_1" class="md-nav__link">
+    NetworkSystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networksystem_2" class="md-nav__link">
+    ~NetworkSystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newplayer" class="md-nav__link">
+    newPlayer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeplayer" class="md-nav__link">
+    removePlayer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affectcontrollable" class="md-nav__link">
+    affectControllable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addclienttoroom" class="md-nav__link">
+    addClientToRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeclientfromroom" class="md-nav__link">
+    removeClientFromRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roomexist" class="md-nav__link">
+    roomExist
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createnewroom" class="md-nav__link">
+    createNewRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteroom" class="md-nav__link">
+    deleteRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendresponse" class="md-nav__link">
+    sendResponse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendsparsearray" class="md-nav__link">
+    sendSparseArray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isserveravailable" class="md-nav__link">
+    isServerAvailable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getconnectednb" class="md-nav__link">
+    getConnectedNb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrooms" class="md-nav__link">
+    getRooms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initroom" class="md-nav__link">
+    initRoom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    Handlers
+  </a>
+  
+    <nav class="md-nav" aria-label="Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handletextmessage" class="md-nav__link">
+    handleTextMessage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handleconnectionrequest" class="md-nav__link">
+    handleConnectionRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handledisconnectionrequest" class="md-nav__link">
+    handleDisconnectionRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handleentitykilled" class="md-nav__link">
+    handleEntityKilled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlekeyboardevent" class="md-nav__link">
+    handleKeyboardEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlecreateroom" class="md-nav__link">
+    handleCreateRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlekeepconnection" class="md-nav__link">
+    handleKeepConnection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    Miscellaneous
+  </a>
+  
+    <nav class="md-nav" aria-label="Miscellaneous">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networksystemserver" class="md-nav__link">
+    networkSystemServer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getclients" class="md-nav__link">
+    getClients
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeclient" class="md-nav__link">
+    removeClient
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writetologs" class="md-nav__link">
+    writeToLogs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removetimeoutclients" class="md-nav__link">
+    removeTimeoutClients
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Protocol
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Protocol
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Protocol/binary_protocol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binary protocol
   </span>
   
 
@@ -631,139 +1038,7 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_2_6" id="__nav_4_2_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Systems
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2_6">
-            <span class="md-nav__icon md-icon"></span>
-            Systems
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../ECS/Systems/Network/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    NetworkSystem
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Protocol
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            Protocol
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../binary_protocol/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Binary protocol
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
         
           
           <label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
@@ -777,7 +1052,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3_2">
             <span class="md-nav__icon md-icon"></span>
             Packets
@@ -790,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../client_status/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/client_status/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -808,18 +1083,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Protocol/Packets/connection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -828,7 +1094,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -840,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../create_room/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/create_room/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -860,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../disconnection_request/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/disconnection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecs_controllable/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/ecs_controllable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecs_damage/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/ecs_damage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecs_destroyable/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/ecs_destroyable/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecs_hitbox/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/ecs_hitbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecs_mouvement_pattern/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/ecs_mouvement_pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecs_position/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/ecs_position/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1000,7 +1265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecs_score/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/ecs_score/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1020,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecs_tag/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/ecs_tag/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ecs_velocity/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/ecs_velocity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../entity_killed/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/entity_killed/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1080,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../force_disconnect/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/force_disconnect/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1100,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../joined_room/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/joined_room/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1120,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../keep_connection/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/keep_connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1140,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../keyboard_event/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/keyboard_event/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../left_room/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/left_room/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../placeholder/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/placeholder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../room_available/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/room_available/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1220,7 +1485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../room_closed/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/room_closed/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1240,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../text_message/" class="md-nav__link">
+      <a href="../../../Protocol/Packets/text_message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1297,6 +1562,249 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#constructors-destructors" class="md-nav__link">
+    Constructors / Destructors
+  </a>
+  
+    <nav class="md-nav" aria-label="Constructors / Destructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networksystem_1" class="md-nav__link">
+    NetworkSystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networksystem_2" class="md-nav__link">
+    ~NetworkSystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newplayer" class="md-nav__link">
+    newPlayer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeplayer" class="md-nav__link">
+    removePlayer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affectcontrollable" class="md-nav__link">
+    affectControllable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addclienttoroom" class="md-nav__link">
+    addClientToRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeclientfromroom" class="md-nav__link">
+    removeClientFromRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roomexist" class="md-nav__link">
+    roomExist
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createnewroom" class="md-nav__link">
+    createNewRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteroom" class="md-nav__link">
+    deleteRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendresponse" class="md-nav__link">
+    sendResponse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendsparsearray" class="md-nav__link">
+    sendSparseArray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isserveravailable" class="md-nav__link">
+    isServerAvailable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getconnectednb" class="md-nav__link">
+    getConnectedNb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getrooms" class="md-nav__link">
+    getRooms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initroom" class="md-nav__link">
+    initRoom
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handlers" class="md-nav__link">
+    Handlers
+  </a>
+  
+    <nav class="md-nav" aria-label="Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handletextmessage" class="md-nav__link">
+    handleTextMessage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handleconnectionrequest" class="md-nav__link">
+    handleConnectionRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handledisconnectionrequest" class="md-nav__link">
+    handleDisconnectionRequest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handleentitykilled" class="md-nav__link">
+    handleEntityKilled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlekeyboardevent" class="md-nav__link">
+    handleKeyboardEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlecreateroom" class="md-nav__link">
+    handleCreateRoom
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlekeepconnection" class="md-nav__link">
+    handleKeepConnection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous" class="md-nav__link">
+    Miscellaneous
+  </a>
+  
+    <nav class="md-nav" aria-label="Miscellaneous">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#networksystemserver" class="md-nav__link">
+    networkSystemServer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getclients" class="md-nav__link">
+    getClients
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeclient" class="md-nav__link">
+    removeClient
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writetologs" class="md-nav__link">
+    writeToLogs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removetimeoutclients" class="md-nav__link">
+    removeTimeoutClients
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1310,28 +1818,97 @@
                   
 
 
-<h1 id="connection-request">Connection request</h1>
-<p>Type <code>CONNECTION_REQUEST</code>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">connectionRequest</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="p">,</span><span class="w"> </span><span class="n">UUID_SIZE</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uuid</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">connectionRequest</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">status</span><span class="p">(</span><span class="n">REQUEST</span><span class="p">)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">UUID_SIZE</span><span class="p">);</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">connectionRequest</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">status</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cliUuid</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">status</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">memmove</span><span class="p">(</span><span class="o">&amp;</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="n">cliUuid</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">UUID_SIZE</span><span class="p">);</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">};</span>
-</span></code></pre></div>
-The connection request packet asks the server if the client can connect to the server. The client is not expected to provide anything upon sending the packet, however, the packet type must be revelant in the header.</p>
-<p>The <code>std::uint8_t status</code> refers to the server response and so, doesn't need to be set from the client. The server will response with <code>ACCEPTED</code> anyway, as the connection will always be valid, even if the client is already connected to the server. It is the client job to check if he already has an open connection with the server.</p>
-<p>When receiving the packet response from the server, the <code>dataSize</code> should be set to <code>UUID_SIZE</code>, or 37 bits (is unchanged in the code) containing the UUID the client holds on the server. This Universally Unique Identifier must be used from now to send any packets to the server, if no UUID are provided, the server will refuse them.</p>
-<p>The UUID represent a string as follow:
-<code>XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code></p>
+<h1 id="networksystem">NetworkSystem</h1>
+<p>The network system provided a way to communicate with the server and modify the ECS content upon receiving a packet.</p>
+<p>It is accessible inside the NetworkSystem.hpp file</p>
+<p>Here are the function definitions</p>
+<h2 id="constructors-destructors">Constructors / Destructors</h2>
+<h3 id="networksystem_1">NetworkSystem</h3>
+<p><code>NetworkSystem()</code></p>
+<p>Ctor of the system.</p>
+<h3 id="networksystem_2">~NetworkSystem</h3>
+<p><code>~NetworkSystem()</code></p>
+<p>Dtor of the system.</p>
+<h3 id="newplayer">newPlayer</h3>
+<p><code>std::pair&lt;float, float&gt; newPlayer(std::uint64_t roomId, Registry &amp;ecs, const std::string &amp;clientUUID)</code></p>
+<p>Adds the new player UUID into the registry of the room identifier.</p>
+<h3 id="removeplayer">removePlayer</h3>
+<p><code>void removePlayer(Registry &amp;ecs, const std::string &amp;clientUUID)</code></p>
+<p>Remove the player UUID from the registry provided.</p>
+<h3 id="affectcontrollable">affectControllable</h3>
+<p><code>void affectControllable(Registry &amp;ecs, const std::string &amp;clientUUID, int keyCode)</code></p>
+<p>Handles the received input from the client UUID inside the given ecs.</p>
+<h3 id="addclienttoroom">addClientToRoom</h3>
+<p><code>bool addClientToRoom(const std::string &amp;clientUUID, std::uint64_t roomId)</code></p>
+<p>Adds the new client UUID to the given room identifier.</p>
+<h3 id="removeclientfromroom">removeClientFromRoom</h3>
+<p><code>bool removeClientFromRoom(const std::string &amp;clientUUID, std::uint64_t roomId)</code></p>
+<p>Removes the given client UUID from the roomId.</p>
+<h3 id="roomexist">roomExist</h3>
+<p><code>bool roomExist(std::uint64_t roomId)</code></p>
+<p>Check if the given room identifier exists. Returns true if so or false.</p>
+<h3 id="createnewroom">createNewRoom</h3>
+<p><code>std::uint64_t createNewRoom(std::uint8_t maxSlots)</code></p>
+<p>Creates a new room with the given maximum number of player allowed.</p>
+<h3 id="deleteroom">deleteRoom</h3>
+<p><code>void deleteRoom(std::uint64_t roomId)</code></p>
+<p>Deletes the given room from the list.</p>
+<h3 id="sendresponse">sendResponse</h3>
+<p><code>void sendResponse(const packet::packetTypes &amp;type, T &amp;data, std::uint64_t roomId = std::numeric_limits&lt;std::uint64_t&gt;::max(), bool toServerEndpoint = false, const std::string cliUuid = "")</code></p>
+<p>Asks the network to send a response to the clients of the given room identifier.</p>
+<h3 id="sendsparsearray">sendSparseArray</h3>
+<p><code>void sendSparseArray(const packet::packetTypes &amp;type, sparse_array&lt;T&gt; &amp;sparseArray, std::uint64_t roomId, const std::string &amp;cliUuid = "")</code></p>
+<p>Asks the network to send the sparse array to the clients of the given room identifiers.</p>
+<h3 id="isserveravailable">isServerAvailable</h3>
+<p><code>bool isServerAvailable()</code></p>
+<p>Asks the network if the socket is opened.</p>
+<h3 id="getconnectednb">getConnectedNb</h3>
+<p><code>std::size_t getConnectedNb(std::uint64_t roomId)</code></p>
+<p>Returns the number of clients connected to the given room identifier.</p>
+<h3 id="getrooms">getRooms</h3>
+<p><code>std::vector&lt;Room&gt; &amp;getRooms() noexcept</code></p>
+<p>Returns the vector of rooms already created.</p>
+<h3 id="initroom">initRoom</h3>
+<p><code>void initRoom(std::uint64_t roomId, std::unordered_map&lt;std::uint64_t, Registry&gt; &amp;regs)</code></p>
+<p>Initialize the ECS for the newly created room. This is mandatory before doing anything with the registry.</p>
+<h2 id="handlers">Handlers</h2>
+<h3 id="handletextmessage">handleTextMessage</h3>
+<p><code>void handleTextMessage(const std::array&lt;std::uint8_t, packetSize&gt; &amp;packet, const packet::packetHeader &amp;header)</code></p>
+<p>Reads the received packet message and sends it back to all clients in the room.</p>
+<h3 id="handleconnectionrequest">handleConnectionRequest</h3>
+<p><code>void handleConnectionRequest(std::unordered_map&lt;std::uint64_t, Registry&gt; &amp;regs, packet::packetTypes type, std::array&lt;std::uint8_t, packetSize&gt; &amp;packet)</code></p>
+<p>Reads the received packet connection request and performs the required actions to satisfy the client needs. The connection can be rejected if the information asked are corrupted or invalid.</p>
+<h3 id="handledisconnectionrequest">handleDisconnectionRequest</h3>
+<p><code>void handleDisconnectionRequest(std::unordered_map&lt;std::uint64_t, Registry&gt; &amp;regs, const std::array&lt;std::uint8_t, packetSize&gt; &amp;packet, const packet::packetHeader &amp;header)</code></p>
+<p>Reads the received packet disconnection request and performs the required actions to disconnect the client.</p>
+<h3 id="handleentitykilled">handleEntityKilled</h3>
+<p><code>void handleEntityKilled(Entity entity, std::uint64_t roomId)</code></p>
+<p>Sends a packet to all clients in the given room identifier that the given entity has been killed.</p>
+<h3 id="handlekeyboardevent">handleKeyboardEvent</h3>
+<p><code>void handlekeyboardEvent(std::unordered_map&lt;std::uint64_t, Registry&gt; &amp;regs, const std::array&lt;std::uint8_t, packetSize&gt; &amp;packet, const packet::packetHeader &amp;header)</code></p>
+<p>Calls the affectControllable function to handle the keyboard events.</p>
+<h3 id="handlecreateroom">handleCreateRoom</h3>
+<p><code>void handleCreateRoom(std::unordered_map&lt;std::uint64_t, Registry&gt; &amp;regs, const std::array&lt;std::uint8_t, packetSize&gt; &amp;packet)</code></p>
+<p>Reads the received packet to create a new room.</p>
+<h3 id="handlekeepconnection">handleKeepConnection</h3>
+<p><code>void handleKeepConnection(const std::array&lt;std::uint8_t, packetSize&gt; &amp;packet, const packet::packetHeader &amp;header)</code></p>
+<p>Accept the client response to the connection ping.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="networksystemserver">networkSystemServer</h3>
+<p><code>void networkSystemServer(std::unordered_map&lt;std::uint64_t, Registry&gt; &amp;regs)</code></p>
+<p>The core function of the networkSystemServer</p>
+<h3 id="getclients">getClients</h3>
+<p><code>std::vector&lt;net::Client&gt; &amp;getClients() noexcept</code></p>
+<p>Asks the network to return the client list as a vector of Client class.</p>
+<h3 id="removeclient">removeClient</h3>
+<p><code>void removeClient(const std::string &amp;clientUUID)</code></p>
+<p>Asks the network to removes the given client UUID from the list.</p>
+<h3 id="writetologs">writeToLogs</h3>
+<p><code>void writeToLogs(const std::string_view &amp;status, const std::string &amp;msg)</code></p>
+<p>Asks the network to write to the server log the provided message.</p>
+<h3 id="removetimeoutclients">removeTimeoutClients</h3>
+<p><code>bool removeTimeoutClients(std::uint64_t roomId, Registry &amp;ecs)</code></p>
+<p>Removes the no longer connected or too slow clients from the given room identifier.</p>
 
 
 

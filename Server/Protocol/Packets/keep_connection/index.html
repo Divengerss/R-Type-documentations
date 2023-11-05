@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../client_status/">
+        <link rel="prev" href="../joined_room/">
       
       
-        <link rel="next" href="../create_room/">
+        <link rel="next" href="../keyboard_event/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Connection request - R-Type Networked</title>
+        <title>Keep Connection - R-Type Networked</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connection-request" class="md-skip">
+        <a href="#keep-connection" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connection request
+              Keep Connection
             
           </span>
         </div>
@@ -808,18 +808,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../connection_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -828,7 +819,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1118,9 +1108,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../keep_connection/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1129,6 +1128,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1310,28 +1310,23 @@
                   
 
 
-<h1 id="connection-request">Connection request</h1>
-<p>Type <code>CONNECTION_REQUEST</code>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">connectionRequest</span>
+<h1 id="keep-connection">Keep Connection</h1>
+<p>Type <code>KEEP_CONNECTION</code>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">keepConnection</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="p">,</span><span class="w"> </span><span class="n">UUID_SIZE</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uuid</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">connectionRequest</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">status</span><span class="p">(</span><span class="n">REQUEST</span><span class="p">)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">UUID_SIZE</span><span class="p">);</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">connectionRequest</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">status</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cliUuid</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">status</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">memmove</span><span class="p">(</span><span class="o">&amp;</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="n">cliUuid</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">UUID_SIZE</span><span class="p">);</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">};</span>
-</span></code></pre></div>
-The connection request packet asks the server if the client can connect to the server. The client is not expected to provide anything upon sending the packet, however, the packet type must be revelant in the header.</p>
-<p>The <code>std::uint8_t status</code> refers to the server response and so, doesn't need to be set from the client. The server will response with <code>ACCEPTED</code> anyway, as the connection will always be valid, even if the client is already connected to the server. It is the client job to check if he already has an open connection with the server.</p>
-<p>When receiving the packet response from the server, the <code>dataSize</code> should be set to <code>UUID_SIZE</code>, or 37 bits (is unchanged in the code) containing the UUID the client holds on the server. This Universally Unique Identifier must be used from now to send any packets to the server, if no UUID are provided, the server will refuse them.</p>
-<p>The UUID represent a string as follow:
-<code>XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</code></p>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">uint8_t</span><span class="p">,</span><span class="w"> </span><span class="n">uuidSize</span><span class="o">&gt;</span><span class="w"> </span><span class="n">uuid</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">keepConnection</span><span class="p">()</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">uuidSize</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">keepConnection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">clientUUID</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">memmove</span><span class="p">(</span><span class="o">&amp;</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="n">clientUUID</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">uuidSize</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">};</span>
+</span></code></pre></div></p>
+<p>This packet is sent by the server to the client of UUID to keep track of their connection. If the client doesn't respond after N number of packets of this type sent, the client is disconnected from the server.</p>
 
 
 
