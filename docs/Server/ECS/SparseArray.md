@@ -127,7 +127,7 @@ Same as `insert_at` but moves the value instead of copying it.
 ```cpp
 reference_type push_back(std::optional<Component> &&value);
 ```
-Insert the value at the back of the array.
+Insert the value at the back of the array, and returns a reference to the value.
 
 ### erase()
 ```cpp
